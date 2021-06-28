@@ -1,17 +1,19 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import PostList from './containers/PostList'
 import './App.css';
-import {Users} from "./data.js";
+import { Users } from "./data.js";
 
 function App() {
-  const [user] = useState(Users[0]);
+  const [currentUser] = useState(Users[0]);
 
   return (
     <div className="App">
-      <div style={{"background-color": "blue", "color": "black", "margin": "auto"}}>
+      <div
+        className="p-2 text-center"
+        style={{ "background-color": "blue", "color": "black", "margin": "auto", "position": "sticky" }}>
         <h1>Facebook Post App</h1>
       </div>
-      <PostList user={user}/>
+      <PostList currentUser={currentUser} />
     </div>
   );
 }

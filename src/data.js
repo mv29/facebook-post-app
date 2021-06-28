@@ -1,6 +1,6 @@
 // User: Name, Email , Id
 // Post: Array[Content, UserId,Array[Emotions], Array[commentId], DateTime]
-// Comment: Array[Content, UserId, Array[Emotions], PostId, Array[CommentId],DateTime] 
+// Comment: Array[Content, UserId, PostId, Array[CommentId],DateTime, userName] 
 // Emotion: Array[UserId, CommentId, PostId, Type, DateTime, id]
 import {generatedId} from "./commonHelpers";
 
