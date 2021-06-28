@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+import React, {useState} from 'react'
+import PostList from './containers/PostList'
 import './App.css';
+import {Users} from "./data.js";
 
 function App() {
+  const [user] = useState(Users[0]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{"background-color": "blue", "color": "black", "margin": "auto"}}>
+        <h1>Facebook Post App</h1>
+      </div>
+      <PostList user={user}/>
     </div>
   );
 }
